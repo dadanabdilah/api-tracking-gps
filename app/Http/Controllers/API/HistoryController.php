@@ -32,8 +32,8 @@ class HistoryController extends BaseController
      */
     public function store(Request $request)
     {
-//         $header = $request->header('Token');
-        $header = "qwertyuiop";
+        $header = $request->header('Token');
+//         $header = "qwertyuiop";
         $data = User::where('remember_token', $header)->first();
 
         if ($data) {
